@@ -1,0 +1,1 @@
+print('Kurt Vonnegut once said, "We are what we pretend to be, so we must be careful about what we pretend to be."')
