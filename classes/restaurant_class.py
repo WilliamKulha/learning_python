@@ -26,3 +26,20 @@ tsujiya.describe_restaurant()
 mori_no_horu = Restaurant("Mori No Horu", "Local Doto Delicacies", 18)
 
 mori_no_horu.describe_restaurant()
+
+class IceCreamStand(Restaurant) :
+  """A Naive subclass of the Restaurant class"""
+  def __init__(self, restaurant_name, cuisine_type, seating_capacity, flavors) :
+    super().__init__(restaurant_name, cuisine_type, seating_capacity)
+    self.flavors = flavors
+  
+  def list_flavors(self) :
+    print(f"Here are the flavors available at {self.name}")
+    for flavor in self.flavors :
+      print(f"{flavor}")
+  
+
+michi_no_eki = IceCreamStand('Michi No Eki', "Ice Cream", 10, ['Orange', 'Vanilla', 'Chocolate', 'Strawberry', 'Sakura Mochi', 'Maccha', 'Kurumi'])
+
+michi_no_eki.describe_restaurant()
+michi_no_eki.list_flavors()
